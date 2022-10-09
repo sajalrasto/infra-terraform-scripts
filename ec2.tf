@@ -5,7 +5,7 @@ resource "aws_instance" "instance_type" {
   subnet_id                   = aws_subnet.subnet1-public.id
   associate_public_ip_address = true
   availability_zone           = var.azs
-  #user_data                   = file("docker.sh")
+  user_data                   = file("docker.sh")
   user_data                   = "${file("jenkins.sh")}"
   key_name                    = var.key_name
   root_block_device {
@@ -31,7 +31,7 @@ resource "aws_instance" "instance_type1" {
   subnet_id                   = aws_subnet.subnet1-public.id
   associate_public_ip_address = true
   availability_zone           = var.azs
-  #user_data                   = file("docker.sh")
+  user_data                   = file("docker.sh")
   #user_data                   = "${file("jenkins.sh")}"
   key_name                    = var.key_name
   root_block_device {
@@ -52,7 +52,7 @@ resource "aws_instance" "instance_type2" {
   subnet_id                   = aws_subnet.subnet1-public.id
   associate_public_ip_address = true
   availability_zone           = var.azs
-  #user_data                   = file("docker.sh")
+  user_data                   = file("docker.sh")
   #user_data                   = "${file("jenkins.sh")}"
   key_name                    = var.key_name
   root_block_device {
@@ -72,7 +72,7 @@ resource "aws_instance" "instance_type3" {
   subnet_id                   = aws_subnet.subnet1-public.id
   associate_public_ip_address = true
   availability_zone           = var.azs
-  #user_data                   = file("docker.sh")
+  user_data                   = file("docker.sh")
   #user_data                   = "${file("jenkins.sh")}"
   key_name                    = var.key_name
   root_block_device {
